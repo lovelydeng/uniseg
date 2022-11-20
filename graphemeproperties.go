@@ -9,7 +9,7 @@ package uniseg
 // ("Extended_Pictographic" only)
 // on September 10, 2022. See https://www.unicode.org/license.html for the Unicode
 // license agreement.
-var graphemeCodePoints = [][3]int{
+var graphemeCodePoints = [][]int{
 	{0x0000, 0x0009, prControl},                // Cc  [10] <control-0000>..<control-0009>
 	{0x000A, 0x000A, prLF},                     // Cc       <control-000A>
 	{0x000B, 0x000C, prControl},                // Cc   [2] <control-000B>..<control-000C>

@@ -9,7 +9,7 @@ package uniseg
 // ("Extended_Pictographic" only)
 // on September 10, 2022. See https://www.unicode.org/license.html for the Unicode
 // license agreement.
-var emojiPresentation = [][3]int{
+var emojiPresentation = [][]int{
 	{0x231A, 0x231B, prEmojiPresentation},   // E0.6   [2] (⌚..⌛)    watch..hourglass done
 	{0x23E9, 0x23EC, prEmojiPresentation},   // E0.6   [4] (⏩..⏬)    fast-forward button..fast down button
 	{0x23F0, 0x23F0, prEmojiPresentation},   // E0.6   [1] (⏰)       alarm clock

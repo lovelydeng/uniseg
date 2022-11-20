@@ -9,7 +9,7 @@ package uniseg
 // ("Extended_Pictographic" only)
 // on September 10, 2022. See https://www.unicode.org/license.html for the Unicode
 // license agreement.
-var eastAsianWidth = [][3]int{
+var eastAsianWidth = [][]int{
 	{0x0000, 0x001F, prN},     // Cc    [32] <control-0000>..<control-001F>
 	{0x0020, 0x0020, prNa},    // Zs         SPACE
 	{0x0021, 0x0023, prNa},    // Po     [3] EXCLAMATION MARK..NUMBER SIGN

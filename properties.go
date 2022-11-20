@@ -134,7 +134,7 @@ const (
 // propertySearch performs a binary search on a property slice and returns the
 // entry whose range (start = first array element, end = second array element)
 // includes r, or an array of 0's if no such entry was found.
-func propertySearch[E interface{ [3]int | [4]int }](dictionary []E, r rune) (result E) {
+func propertySearch(dictionary [][]int, r rune) (result []int) {
 	// Run a binary search.
 	from := 0
 	to := len(dictionary)
@@ -156,13 +156,17 @@ func propertySearch[E interface{ [3]int | [4]int }](dictionary []E, r rune) (res
 
 // property returns the Unicode property value (see constants above) of the
 // given code point.
-func property(dictionary [][3]int, r rune) int {
-	return propertySearch(dictionary, r)[2]
+func property(dictionary [][]int, r rune) int {
+	s := propertySearch(dictionary, r)
+	if len(s) >=2 {
+		return s[2]
+	}
+	return 0
 }
 
 // propertyWithGenCat returns the Unicode property value and General Category
 // (see constants above) of the given code point.
-func propertyWithGenCat(dictionary [][4]int, r rune) (property, generalCategory int) {
+func propertyWithGenCat(dictionary [][]int, r rune) (property, generalCategory int) {
 	entry := propertySearch(dictionary, r)
 	return entry[2], entry[3]
 }

@@ -9,7 +9,7 @@ package uniseg
 // ("Extended_Pictographic" only)
 // on September 10, 2022. See https://www.unicode.org/license.html for the Unicode
 // license agreement.
-var lineBreakCodePoints = [][4]int{
+var lineBreakCodePoints = [][]int{
 	{0x0000, 0x0008, prCM, gcCc},     //     [9] <control-0000>..<control-0008>
 	{0x0009, 0x0009, prBA, gcCc},     //         <control-0009>
 	{0x000A, 0x000A, prLF, gcCc},     //         <control-000A>
